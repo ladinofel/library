@@ -1,0 +1,22 @@
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  margin: 1.5vw;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.main-title-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+svg {
+  width:2vw;
+  height: auto;
+}
