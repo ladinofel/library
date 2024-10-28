@@ -6,6 +6,13 @@ body {
   margin: 1.5vw;
 }
 
+.main-container {
+  display: grid;
+  grid-template: 10% 70% 10% / 100%;
+  align-content: space-between;
+  height: 95vh;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -16,7 +23,35 @@ body {
   gap: 0.5vw;
 }
 
-svg {
-  width:2vw;
+.add-book-container {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+
+#add-book {
+  border-radius: 10px;
+  font-size: larger;  
+  text-align: center;
+}
+
+#add-book:hover {
+  background-color: rgb(159, 226, 238);
+  cursor: pointer;
+}
+
+#github-logo {
   height: auto;
+  width: 1.5vw;
+}
+  
+.footer-container {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.mid-container {
+  height: 80%;
 }
