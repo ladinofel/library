@@ -35,6 +35,44 @@
   </div>
   <dialog id="modal">
     <h2 class="modal-title">New Book</h2>
+    <form action="" id="myForm" method="get" autocomplete="off">
+      <div class="title">
+        <label for="book-title">Book title:</label>
+        <input type="text" id="book-title" name="book-title">
+      </div>
+      <div class="author">
+        <label for="book-author">Book author:</label>
+        <input type="text" id="book-author" name="book-author">
+      </div>
+      <div class="pages">
+        <label for="book-pages">Book pages:</label>
+        <input type="text" id="book-pages" name="book-pages">
+      </div>
+      <div class="status">
+        <p>Have you read this book?</p>
+        <div class="options">
+          <div class="yes">
+            <input type="radio" id="book-read" name="book-read" value="READ ALREADY">
+            <label for="book-read">Yes</label>
+          </div>
+          <div class="no">
+            <input type="radio" id="book-not-read" name="book-not-read" value="NOT READ YET">
+            <label for="book-not-read">No</label>
+          </div>
+        </div>
+      </div>
+      <div class="book-category">
+        <p>Choose the book category:</p>
+        <select name="book-cateogry" id="book-category">
+          <option value="education">Education</option>
+          <option value="work">Work</option>
+          <option value="leisure">Leisure</option>
+        </select>
+      </div>
+      <div class="submit-form">
+        <button type="button" id="submit-book">Submit Book</button>
+      </div>      
+    </form>
   </dialog>
   <script src="./script.js"></script> 
 </body>

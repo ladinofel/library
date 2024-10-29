@@ -55,3 +55,29 @@ body {
 .mid-container {
   height: 80%;
 }
+
+.modal-title {
+  text-align: center;
+}
+
+.title,
+.author,
+.pages {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1vh;
+}
+
+.submit-form {
+  margin-top: 2vh;
+}
+
+#submit-book:hover {
+  background-color: rgb(159, 226, 238);
+  cursor: pointer;
+}
+
+#modal {
+  width:35vw;
+  height: 55vh;
+}
