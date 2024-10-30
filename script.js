@@ -4,6 +4,7 @@ let submitBook = document.getElementById('submit-book');
 let generic_book;
 let myForm;
 let myLibrary = [];
+let middleContainer = document.querySelector('.mid-container');
 
 
 addBook.addEventListener('click', () => {
@@ -40,8 +41,36 @@ function addBookLibrary () {
     myForm = document.getElementById('myForm').reset();
     modal.close();
     console.log(myLibrary);
+    bookMaker(generic_book);
   });
 };
 
+function bookMaker (generic_book) {
+  let book_container = document.createElement('div');
+  let btnContainer = document.createElement('div');
+  let book_title = document.createElement('p');
+  let book_author = document.createElement('p');
+  let book_pages = document.createElement('p');
+  let book_status = document.createElement('p');
+  let book_category = document.createElement('p');
+  let changeBtn = document.createElement('button');
+  let deleteBtn = document.createElement('button');
+  book_title.textContent = `Title: ${myLibrary[myLibrary.length - 1].book_title}`;
+  book_author.textContent = `Author: ${myLibrary[myLibrary.length - 1].book_author}`;
+  book_pages.textContent = `Page number: ${myLibrary[myLibrary.length - 1].book_pages}`;
+  book_status.textContent = `Book status: ${myLibrary[myLibrary.length - 1].book_status}`;
+  book_category.textContent = `Book category: ${myLibrary[myLibrary.length - 1].book_category}`;
+  changeBtn.textContent = 'Change Status';
+  deleteBtn.textContent = 'Delete Book';
+  btnContainer.append(changeBtn, deleteBtn);
+  book_container.append(book_title, book_author, book_pages, book_status, book_category, btnContainer);
+  middleContainer.append(book_container);
+
+  changeBtn.addEventListener('click', () => {
+    generic_book.change_status();
+    book_status.textContent = `Book status ${generic_book.book_status}`;
+    book_container.insertBefore(book_status, book_category);
+  });
+};
 
 addBookLibrary();
