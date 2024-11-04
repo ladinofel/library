@@ -1,3 +1,4 @@
+//Initialize the necessary variables
 let modal = document.getElementById('modal');
 let addBook = document.getElementById("add-book");
 let submitBook = document.getElementById('submit-book');
@@ -6,11 +7,12 @@ let myForm;
 let myLibrary = [];
 let middleContainer = document.querySelector('.mid-container');
 
-
+//This eventListener triggers the modal
 addBook.addEventListener('click', () => {
   modal.showModal();
 });
 
+//This class is the Book constructor
 class Book {
   constructor(book_title, book_author, book_pages, book_status, book_category){
     this.book_title = book_title;
@@ -28,6 +30,7 @@ class Book {
   };
 };
 
+//This function adds books to the library array and triggers the bookMaker function
 function addBookLibrary () {
   submitBook.addEventListener('click', () => {
     let book_title = document.getElementById('book-title').value;
@@ -44,6 +47,7 @@ function addBookLibrary () {
   });
 };
 
+//This function manipulates the DOM and creates visual book elements
 function bookMaker (generic_book) {
   let book_container = document.createElement('div');
   book_container.classList.add('book-container');
