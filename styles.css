@@ -8,7 +8,7 @@ body {
 
 .main-container {
   display: grid;
-  grid-template: 10% 70% 10% / 100%;
+  grid-template: auto 1fr auto / 100%;
   align-content: space-between;
   height: 95vh;
 }
@@ -46,14 +46,19 @@ body {
 }
   
 .footer-container {
+  margin-top: 2vh;
   display: flex;
   gap: 1vw;
   align-items: center;
   justify-content: center;
+
 }
 
 .mid-container {
   height: 80%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  row-gap: 3vh;
 }
 
 .modal-title {
@@ -80,4 +85,17 @@ body {
 #modal {
   width:35vw;
   height: 55vh;
+}
+
+.btn-container {
+  display: flex;
+  gap:2vw;
+}
+
+.book-container {
+  height: 1fr;
+  width: 70%;
+  padding: 4%;
+  border: solid;
+  border-radius: 5px;
 }
